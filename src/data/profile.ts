@@ -57,7 +57,7 @@ export const timeline = [
 ];
 
 export const homeStats = [
-  { value: "4", label: "Major AI Projects", icon: "brain" as const },
+  { value: "5", label: "Major AI Projects", icon: "brain" as const },
   { value: "3", label: "National Hackathons", icon: "trophy" as const },
   { value: "F1", label: "Formula 1 Operations", icon: "flag" as const },
   { value: "90+", label: "Volunteer Hours", icon: "heart" as const },

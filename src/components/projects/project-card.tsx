@@ -10,7 +10,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Container, Section, SectionHeader } from "@/components/ui/section";
 
 export function FeaturedProjects() {
-  const featured = getPublishedProjects().slice(0, 4);
+  const featured = getPublishedProjects().slice(0, 3);
 
   return (
     <Section>

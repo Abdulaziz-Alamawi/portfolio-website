@@ -260,7 +260,6 @@ export const projects: Project[] = [
     highlights: ["Career AI", "Interview Sim", "Skill Gap Analysis"],
     github: "https://github.com/Abdulaziz-Alamawi",
     status: "Production",
-    published: false,
   },
 ];
 
