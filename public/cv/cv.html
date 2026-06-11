@@ -13,17 +13,16 @@
   html, body {
     font-family: "Calibri", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     color: #1a1a1a;
-    font-size: 10.3pt;
-    line-height: 1.4;
+    font-size: 10.4pt;
+    line-height: 1.42;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
-  body { padding: 0; }
 
   /* Header */
   .name {
     text-align: center;
-    font-size: 23pt;
+    font-size: 24pt;
     font-weight: 700;
     letter-spacing: 1.5px;
     color: #0f2a4a;
@@ -43,39 +42,54 @@
     color: #333;
     margin-top: 6px;
   }
-  .contact a { color: #1b4f86; text-decoration: none; }
+
+  /* Clickable links row under name */
+  .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7px 18px;
+    margin-top: 7px;
+  }
+  .link-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 9pt;
+    color: #1b4f86;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .link-item svg { width: 13px; height: 13px; display: block; flex-shrink: 0; }
 
   /* Section */
-  .section { margin-top: 12px; }
+  .section { margin-top: 11px; }
   .section-title {
-    font-size: 10.5pt;
+    font-size: 12pt;
     font-weight: 700;
     color: #0f2a4a;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.8px;
     border-bottom: 1.5px solid #0f2a4a;
     padding-bottom: 2px;
     margin-bottom: 6px;
   }
 
-  /* Education */
   .edu-line { font-weight: 700; }
   .edu-sub { color: #333; }
-
   p.summary { text-align: justify; }
 
-  /* Skills */
   .skill-row { margin-bottom: 3px; }
   .skill-label { font-weight: 700; color: #0f2a4a; }
 
-  /* Projects */
-  .project { margin-bottom: 9px; }
+  .project { margin-bottom: 8px; }
   .project-head {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
   }
-  .project-title { font-weight: 700; font-size: 10.5pt; color: #14181c; }
+  .project-title { font-weight: 700; font-size: 10.6pt; color: #14181c; }
   .project-role { font-weight: 600; color: #2b5278; }
   .project-date { font-size: 9pt; color: #555; white-space: nowrap; }
   .project-tech {
@@ -96,7 +110,6 @@
     left: 2px;
     color: #2b5278;
   }
-  .inline-list li { display: inline; padding: 0; }
   .langs span { margin-right: 22px; }
   .langs b { color: #0f2a4a; }
 </style>
@@ -107,12 +120,20 @@
   <div class="contact">
     Jeddah, Riyadh, Saudi Arabia &nbsp;|&nbsp; +966 59 624 4253 &nbsp;|&nbsp; abdooalamawi@gmail.com
   </div>
-  <div class="contact">
-    <a href="https://www.linkedin.com/in/abdulaziz-alamawi-9a2739315">linkedin.com/in/abdulaziz-alamawi-9a2739315</a>
-    &nbsp;|&nbsp;
-    <a href="https://github.com/Abdulaziz-Alamawi">github.com/Abdulaziz-Alamawi</a>
-    &nbsp;|&nbsp;
-    <a href="https://abdulaziz-alamawi-portfolio.vercel.app">abdulaziz-alamawi-portfolio.vercel.app</a>
+
+  <div class="links">
+    <a class="link-item" href="https://www.linkedin.com/in/abdulaziz-alamawi-9a2739315" style="color:#0A66C2;">
+      <svg viewBox="0 0 24 24" fill="#0A66C2" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+      LinkedIn — Abdulaziz Alamawi
+    </a>
+    <a class="link-item" href="https://github.com/Abdulaziz-Alamawi" style="color:#1a1a1a;">
+      <svg viewBox="0 0 24 24" fill="#1a1a1a" xmlns="http://www.w3.org/2000/svg"><path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.29-.01-1.04-.02-2.05-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22 0 1.61-.01 2.9-.01 3.29 0 .32.21.7.82.58A12 12 0 0 0 24 12.5C24 5.87 18.63.5 12 .5z"/></svg>
+      GitHub — Abdulaziz-Alamawi
+    </a>
+    <a class="link-item" href="https://abdulaziz-alamawi-portfolio.vercel.app" style="color:#1b4f86;">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#1b4f86" stroke-width="2" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg>
+      Portfolio Website
+    </a>
   </div>
 
   <div class="section">
@@ -124,20 +145,19 @@
 
   <div class="section">
     <div class="section-title">Professional Summary</div>
-    <p class="summary">Software Engineering graduate from the University of Business and Technology (UBT) with expertise in Artificial Intelligence, Cloud Computing, IT Infrastructure, and Software Solutions. Experienced in designing and developing AI-powered platforms, intelligent analytics systems, smart city solutions, fraud detection platforms, and full-stack applications across cybersecurity, fintech, IoT, and career intelligence domains. Demonstrated leadership through technical community roles, national hackathon participation, Formula 1 operations, and research-driven innovation initiatives. Passionate about building intelligent, scalable digital systems aligned with Saudi Vision 2030.</p>
+    <p class="summary">Software Engineering graduate (UBT) specializing in Artificial Intelligence, Cloud Computing, IT Infrastructure, and Software Solutions. Experienced in designing AI-powered platforms, intelligent analytics, smart city solutions, and fraud detection systems across cybersecurity, fintech, and IoT domains. Proven leadership through community roles, national hackathons, and Formula 1 operations — passionate about building scalable digital systems aligned with Saudi Vision 2030.</p>
   </div>
 
   <div class="section">
     <div class="section-title">Technical Skills</div>
-    <div class="skill-row"><span class="skill-label">Programming Languages:</span> Python • Java • JavaScript • TypeScript • SQL • HTML • CSS</div>
-    <div class="skill-row"><span class="skill-label">Backend &amp; APIs:</span> FastAPI • Node.js • Express.js • REST APIs • WebSockets • API Integration</div>
-    <div class="skill-row"><span class="skill-label">Frontend Technologies:</span> Next.js • React • Tailwind CSS • Responsive Web Development</div>
-    <div class="skill-row"><span class="skill-label">AI &amp; Data Science:</span> Machine Learning • Generative AI • Predictive Analytics • Behavioral Analytics • Anomaly Detection • Fraud Detection • Risk Scoring • Explainable AI • Feature Engineering • Model Evaluation • Data Preprocessing</div>
-    <div class="skill-row"><span class="skill-label">Databases &amp; Data Management:</span> PostgreSQL • MySQL • Prisma ORM • Database Design • Data Modeling</div>
-    <div class="skill-row"><span class="skill-label">Cloud &amp; Infrastructure:</span> Cloud Computing • Microsoft Azure Fundamentals • AWS Fundamentals • Virtual Machines • Network Fundamentals • TCP/IP • Docker</div>
-    <div class="skill-row"><span class="skill-label">Software Engineering:</span> Systems Analysis • Software Design &amp; Architecture • Requirements Engineering • Software Testing • UML Modeling • SDLC • Agile Methodologies</div>
-    <div class="skill-row"><span class="skill-label">Tools &amp; Platforms:</span> Git • GitHub • VS Code • Cursor AI • Microsoft Office</div>
-    <div class="skill-row"><span class="skill-label">Professional Skills:</span> Leadership • Problem Solving • Teamwork • Communication • Project Coordination • Analytical Thinking • Critical Thinking • Time Management • Adaptability</div>
+    <div class="skill-row"><span class="skill-label">Programming:</span> Python • Java • JavaScript • TypeScript • SQL • HTML • CSS</div>
+    <div class="skill-row"><span class="skill-label">Backend &amp; APIs:</span> FastAPI • Node.js • Express.js • REST APIs • WebSockets</div>
+    <div class="skill-row"><span class="skill-label">Frontend:</span> Next.js • React • Tailwind CSS • Responsive Web Development</div>
+    <div class="skill-row"><span class="skill-label">AI &amp; Data Science:</span> Machine Learning • Generative AI • Predictive &amp; Behavioral Analytics • Anomaly &amp; Fraud Detection • Risk Scoring • Explainable AI • Model Evaluation</div>
+    <div class="skill-row"><span class="skill-label">Databases:</span> PostgreSQL • MySQL • Prisma ORM • Database Design &amp; Data Modeling</div>
+    <div class="skill-row"><span class="skill-label">Cloud &amp; Infrastructure:</span> Microsoft Azure • AWS • Docker • Virtual Machines • Networking (TCP/IP)</div>
+    <div class="skill-row"><span class="skill-label">Software Engineering:</span> Software Architecture • Requirements Engineering • Testing • UML • SDLC • Agile</div>
+    <div class="skill-row"><span class="skill-label">Professional:</span> Leadership • Problem Solving • Teamwork • Communication • Critical Thinking • Adaptability</div>
   </div>
 
   <div class="section">
@@ -148,14 +168,12 @@
         <div><span class="project-title">SaTr – AI Fraud Detection Platform</span> &nbsp;|&nbsp; <span class="project-role">Software Engineer &amp; AI Engineer</span></div>
         <div class="project-date">2025 – 2026</div>
       </div>
-      <div class="project-tech">FastAPI • Python • Scikit-Learn • PostgreSQL • Machine Learning • Fraud Analytics</div>
+      <div class="project-tech">FastAPI • Python • Scikit-Learn • PostgreSQL • Machine Learning</div>
       <ul>
-        <li>Collaborated in the design and development of a production-grade AI-powered fraud detection and risk assessment platform that helps financial institutions identify suspicious transactions before execution.</li>
-        <li>Contributed across system architecture, backend services, analytics workflows, database integration, and intelligent decision-support capabilities supporting secure financial operations.</li>
-        <li>Led the Artificial Intelligence module, including machine learning model development, fraud analytics, predictive modeling, anomaly detection, explainable AI outputs, and hybrid risk-scoring mechanisms.</li>
-        <li>Implemented AML rule analysis, blacklist matching, risk classification models, and intelligent fraud detection workflows to support real-time transaction assessment.</li>
-        <li>Achieved ROC-AUC performance of 96.04% through the implementation and evaluation of advanced machine learning models.</li>
-        <li>Contributed to ongoing research paper preparation and patent development activities associated with the project.</li>
+        <li>Co-developed a production-grade AI fraud detection and risk assessment platform helping financial institutions flag suspicious transactions before execution.</li>
+        <li>Led the AI module: ML model development, fraud analytics, anomaly detection, explainable AI outputs, and hybrid risk-scoring.</li>
+        <li>Implemented AML rule analysis, blacklist matching, and risk classification for real-time transaction assessment.</li>
+        <li>Achieved <b>ROC-AUC 96.04%</b>; contributing to a research paper and patent (in preparation).</li>
       </ul>
     </div>
 
@@ -164,12 +182,11 @@
         <div><span class="project-title">Absher Neuron 2.0 – AI Security Intelligence Platform</span> &nbsp;|&nbsp; <span class="project-role">Lead Software Engineer &amp; AI Engineer</span></div>
         <div class="project-date">2025 – 2026</div>
       </div>
-      <div class="project-tech">Next.js • TypeScript • FastAPI • PostgreSQL • Prisma • Scikit-Learn • WebSockets • Docker</div>
+      <div class="project-tech">Next.js • TypeScript • FastAPI • PostgreSQL • Prisma • Scikit-Learn • Docker</div>
       <ul>
-        <li>Developed a production-grade AI security intelligence platform focused on digital identity protection, behavioral analytics, and predictive security monitoring.</li>
-        <li>Implemented behavioral identity profiling, anomaly detection, risk scoring, adaptive authentication, and intelligent threat prediction capabilities designed to proactively prevent account compromise.</li>
-        <li>Designed and integrated Triple Verification workflows including Face Verification, Live Camera Verification, and Automated Phone Verification for high-risk authentication scenarios.</li>
-        <li>Built real-time monitoring systems, security analytics dashboards, identity intelligence services, and live alerting capabilities for large-scale digital platforms.</li>
+        <li>Built an AI security intelligence platform for digital identity protection, behavioral analytics, and predictive monitoring.</li>
+        <li>Implemented behavioral profiling, anomaly detection, risk scoring, adaptive authentication, and threat prediction.</li>
+        <li>Designed Triple Verification (Face, Live Camera, Phone) with real-time monitoring dashboards and live alerting.</li>
       </ul>
     </div>
 
@@ -178,12 +195,11 @@
         <div><span class="project-title">Matrix Smart Makkah – Smart City AI Operating System</span> &nbsp;|&nbsp; <span class="project-role">Lead Software Engineer &amp; AI Engineer</span></div>
         <div class="project-date">2025</div>
       </div>
-      <div class="project-tech">Next.js • TypeScript • FastAPI • PostgreSQL • IoT • WebSockets • Predictive Analytics</div>
+      <div class="project-tech">Next.js • TypeScript • FastAPI • PostgreSQL • IoT • Predictive Analytics</div>
       <ul>
-        <li>Developed a smart city operating platform integrating transportation intelligence, environmental monitoring, waste management, and emergency response services into a unified intelligent ecosystem.</li>
-        <li>Leveraged Artificial Intelligence, IoT infrastructure, and predictive analytics to support city-wide monitoring, forecasting, operational decision-making, and smart resource allocation.</li>
-        <li>Implemented smart transportation analytics, environmental intelligence systems, emergency management capabilities, and executive command-center dashboards.</li>
-        <li>Built real-time monitoring platforms, forecasting systems, operational analytics modules, and city-wide situational awareness capabilities aligned with smart city initiatives.</li>
+        <li>Developed a smart city platform unifying transportation, environmental monitoring, waste management, and emergency response.</li>
+        <li>Leveraged AI, IoT, and predictive analytics for city-wide monitoring, forecasting, and operational decision-making.</li>
+        <li>Built executive command-center dashboards with real-time analytics and situational awareness.</li>
       </ul>
     </div>
 
@@ -194,9 +210,9 @@
       </div>
       <div class="project-tech">Next.js • Express.js • FastAPI • PostgreSQL • Socket.IO • Scikit-Learn</div>
       <ul>
-        <li>Developed a full-stack AI-powered smart home ecosystem integrating IoT devices, predictive maintenance, intelligent automation, and real-time monitoring services.</li>
-        <li>Implemented machine learning models for forecasting, anomaly detection, optimization, recommendation generation, and intelligent home management.</li>
-        <li>Built Digital Twin concepts, analytics dashboards, telemetry systems, device management capabilities, and security monitoring services.</li>
+        <li>Built a full-stack AI smart home ecosystem with IoT integration, predictive maintenance, and intelligent automation.</li>
+        <li>Implemented ML models for forecasting, anomaly detection, optimization, and recommendation generation.</li>
+        <li>Delivered Digital Twin concepts, analytics dashboards, and real-time telemetry &amp; security monitoring.</li>
       </ul>
     </div>
 
@@ -207,24 +223,23 @@
       </div>
       <div class="project-tech">Next.js • FastAPI • PostgreSQL • Prisma • Scikit-Learn</div>
       <ul>
-        <li>Developed an AI-powered SaaS platform focused on career readiness, employability assessment, professional development, and intelligent career planning.</li>
-        <li>Implemented resume analysis, interview simulation, skill-gap assessment, career readiness scoring, recommendation engines, and roadmap generation capabilities.</li>
-        <li>Built analytics dashboards, intelligent reporting systems, personalized recommendations, and career intelligence services supporting students and graduates.</li>
+        <li>Developed an AI SaaS platform for career readiness, employability assessment, and intelligent career planning.</li>
+        <li>Implemented resume analysis, interview simulation, skill-gap assessment, and roadmap generation.</li>
+        <li>Built analytics dashboards and personalized recommendation services for students and graduates.</li>
       </ul>
     </div>
   </div>
 
   <div class="section">
-    <div class="section-title">Certifications &amp; Professional Training</div>
+    <div class="section-title">Certifications &amp; Training</div>
     <ul>
       <li>Professional Certificate Program (PCP) in Project Management Practicals</li>
-      <li>Artificial Intelligence Concepts &amp; Advanced Applications (SDAIA)</li>
-      <li>Fundamentals of Artificial Intelligence (SDAIA)</li>
+      <li>Artificial Intelligence Concepts &amp; Advanced Applications — SDAIA</li>
+      <li>Fundamentals of Artificial Intelligence — SDAIA</li>
       <li>Code Generation and Optimization Using IBM Granite</li>
-      <li>Guided Learning Experience: Using Generative AI for Software Development</li>
+      <li>Using Generative AI for Software Development (Guided Learning Experience)</li>
       <li>CHIPATHON IC Design Training Program</li>
-      <li>Introduction to Cloud Computing (IBM)</li>
-      <li>Introduction to Data Engineering (IBM)</li>
+      <li>Introduction to Cloud Computing — IBM &nbsp;&bull;&nbsp; Introduction to Data Engineering — IBM</li>
     </ul>
   </div>
 
@@ -232,14 +247,10 @@
     <div class="section-title">Awards, Leadership &amp; Activities</div>
     <ul>
       <li>Formula 1 Saudi Arabian Grand Prix (2023–2025): Track Line Leader &amp; Fire Marshal Team Member.</li>
-      <li>Absher Hackathon Finalist.</li>
-      <li>Smart Makkah Hackathon Participant.</li>
-      <li>FinTech Hackathon Participant.</li>
-      <li>GDG On Campus – Management Team Lead: Organized 10+ technical workshops, supported 5+ community events, and engaged 30+ participants.</li>
-      <li>ACM Student Chapter – Vice Leader, Organizing Team: Supervised 15+ members and coordinated technical workshops, interviews, and community activities.</li>
-      <li>90+ Volunteer Hours.</li>
-      <li>Research Paper Contributor (In Preparation).</li>
-      <li>Patent Contributor (In Preparation).</li>
+      <li>Hackathons: Absher Hackathon Finalist • Smart Makkah Participant • FinTech Hackathon Participant.</li>
+      <li>GDG On Campus – Management Team Lead: 10+ workshops, 5+ events, 30+ participants.</li>
+      <li>ACM Student Chapter – Vice Leader, Organizing Team: supervised 15+ members &amp; coordinated technical events.</li>
+      <li>90+ Volunteer Hours • Research Paper &amp; Patent Contributor (in preparation).</li>
     </ul>
   </div>
 
