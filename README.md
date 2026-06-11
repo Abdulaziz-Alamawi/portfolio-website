@@ -99,6 +99,7 @@ No environment variables required for basic deployment.
 ## Customization
 
 - **Content**: Edit files in `src/data/` to update projects, skills, certifications, etc.
+- **Add a project later**: Copy an entry in `src/data/projects.ts` and set `published: true` (or remove `published: false` on an existing draft).
 - **Theme**: Modify CSS variables in `src/app/globals.css`
 - **SEO**: Update `src/lib/site-config.ts` and `src/lib/metadata.ts`
 - **Navigation**: Edit `navLinks` in `src/lib/site-config.ts`

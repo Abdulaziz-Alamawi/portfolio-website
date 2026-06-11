@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { ArrowRight, ExternalLink } from "lucide-react";
-import { projects } from "@/data/projects";
+import { getPublishedProjects, type Project } from "@/data/projects";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/motion/fade-in";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -10,7 +10,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Container, Section, SectionHeader } from "@/components/ui/section";
 
 export function FeaturedProjects() {
-  const featured = projects.slice(0, 3);
+  const featured = getPublishedProjects().slice(0, 4);
 
   return (
     <Section>
@@ -82,7 +82,7 @@ export function FeaturedProjects() {
   );
 }
 
-export function ProjectCard({ project }: { project: (typeof projects)[0] }) {
+export function ProjectCard({ project }: { project: Project }) {
   return (
     <Card className="group flex h-full flex-col hover:shadow-xl hover:shadow-blue-500/5">
       <CardHeader>

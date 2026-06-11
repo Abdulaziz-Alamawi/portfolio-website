@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { projects } from "@/data/projects";
+import { getPublishedProjects } from "@/data/projects";
 import { siteConfig } from "@/lib/site-config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -14,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/contact",
   ];
 
-  const projectPages = projects.map((p) => `/projects/${p.slug}`);
+  const projectPages = getPublishedProjects().map((p) => `/projects/${p.slug}`);
 
   return [...staticPages, ...projectPages].map((path) => ({
     url: `${siteConfig.url}${path}`,

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import { GitHubIcon } from "@/components/icons/social";
-import { projects, getProjectBySlug } from "@/data/projects";
+import { getPublishedProjects, getProjectBySlug } from "@/data/projects";
 import { siteConfig } from "@/lib/site-config";
 import { createPageMetadata } from "@/lib/metadata";
 import { FadeIn } from "@/components/motion/fade-in";
@@ -15,7 +15,7 @@ import { Container, Section } from "@/components/ui/section";
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
-  return projects.map((p) => ({ slug: p.slug }));
+  return getPublishedProjects().map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

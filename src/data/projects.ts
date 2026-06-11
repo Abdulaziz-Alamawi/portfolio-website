@@ -17,6 +17,8 @@ export type Project = {
   metrics?: { label: string; value: string }[];
   status?: string;
   domain: string;
+  /** Set to false to hide from the site until ready. Defaults to true. */
+  published?: boolean;
 };
 
 export const projects: Project[] = [
@@ -258,9 +260,16 @@ export const projects: Project[] = [
     highlights: ["Career AI", "Interview Sim", "Skill Gap Analysis"],
     github: "https://github.com/Abdulaziz-Alamawi",
     status: "Production",
+    published: false,
   },
 ];
 
+export function getPublishedProjects(): Project[] {
+  return projects.filter((p) => p.published !== false);
+}
+
 export function getProjectBySlug(slug: string): Project | undefined {
-  return projects.find((p) => p.slug === slug);
+  const project = projects.find((p) => p.slug === slug);
+  if (!project || project.published === false) return undefined;
+  return project;
 }

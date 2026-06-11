@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { projects } from "@/data/projects";
+import { getPublishedProjects } from "@/data/projects";
 import { siteConfig } from "@/lib/site-config";
 import { createPageMetadata } from "@/lib/metadata";
 import { ProjectCard } from "@/components/projects/project-card";
@@ -23,7 +23,7 @@ export default function ProjectsPage() {
         />
 
         <StaggerContainer className="grid gap-6 md:grid-cols-2">
-          {projects.map((project) => (
+          {getPublishedProjects().map((project) => (
             <StaggerItem key={project.slug}>
               <ProjectCard project={project} />
             </StaggerItem>
